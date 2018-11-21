@@ -22,4 +22,3 @@ For this project I target Windows and Linux (32 bits and 64 bits), but some feat
 
 ### GyvrEngine - Package Diagram
 ![GyvrTools Package Diagram](Documentation/Package%Diagram.svg)
-
