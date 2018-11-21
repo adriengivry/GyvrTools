@@ -1,0 +1,5 @@
+# Visual Studio stuffs
+.vs/
+Build/
+BuildTemp/
+*.user
