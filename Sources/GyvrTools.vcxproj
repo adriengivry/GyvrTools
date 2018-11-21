@@ -72,26 +72,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <SourcePath>$(SolutionDir)src;$(SourcePath)</SourcePath>
-    <OutDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <SourcePath>$(SolutionDir)src;$(SourcePath)</SourcePath>
-    <OutDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <SourcePath>$(SolutionDir)src;$(SourcePath)</SourcePath>
-    <OutDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <SourcePath>$(SolutionDir)src;$(SourcePath)</SourcePath>
-    <OutDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)BuildTemp\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\BuildTemp\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,13 +103,13 @@
       <PreprocessorDefinitions>GYVRTOOLS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <PostBuildEvent>
-      <Command>RD /S /Q "$(SolutionDir)Build\include"
-RD /S /Q "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)"
-RD /S /Q "$(SolutionDir)Build\$(Platform)\$(Configuration)"
+      <Command>RD /S /Q "$(SolutionDir)..\Build\include"
+RD /S /Q "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)"
+RD /S /Q "$(SolutionDir)..\Build\$(Platform)\$(Configuration)"
 
-xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)Build\include\$(ProjectName)" /e /y /i /r
-xcopy "$(OutDir)*.lib" "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)" /y /i
-xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
+xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)..\Build\include\$(ProjectName)" /e /y /i /r
+xcopy "$(OutDir)*.lib" "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)" /y /i
+xcopy "$(OutDir)*.dll" "$(SolutionDir)..\Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
     </PostBuildEvent>
     <BuildLog>
       <Path>$(SolutionDir)BuildTemp\$(MSBuildProjectName).log</Path>
@@ -125,13 +125,13 @@ xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y
       <PreprocessorDefinitions>GYVRTOOLS_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <PostBuildEvent>
-      <Command>RD /S /Q "$(SolutionDir)Build\include"
-RD /S /Q "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)"
-RD /S /Q "$(SolutionDir)Build\$(Platform)\$(Configuration)"
+      <Command>RD /S /Q "$(SolutionDir)..\Build\include"
+RD /S /Q "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)"
+RD /S /Q "$(SolutionDir)..\Build\$(Platform)\$(Configuration)"
 
-xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)Build\include\$(ProjectName)" /e /y /i /r
-xcopy "$(OutDir)*.lib" "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)" /y /i
-xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
+xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)..\Build\include\$(ProjectName)" /e /y /i /r
+xcopy "$(OutDir)*.lib" "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)" /y /i
+xcopy "$(OutDir)*.dll" "$(SolutionDir)..\Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
     </PostBuildEvent>
     <BuildLog>
       <Path>$(SolutionDir)BuildTemp\$(MSBuildProjectName).log</Path>
@@ -153,13 +153,13 @@ xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>RD /S /Q "$(SolutionDir)Build\include"
-RD /S /Q "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)"
-RD /S /Q "$(SolutionDir)Build\$(Platform)\$(Configuration)"
+      <Command>RD /S /Q "$(SolutionDir)..\Build\include"
+RD /S /Q "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)"
+RD /S /Q "$(SolutionDir)..\Build\$(Platform)\$(Configuration)"
 
-xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)Build\include\$(ProjectName)" /e /y /i /r
-xcopy "$(OutDir)*.lib" "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)" /y /i
-xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
+xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)..\Build\include\$(ProjectName)" /e /y /i /r
+xcopy "$(OutDir)*.lib" "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)" /y /i
+xcopy "$(OutDir)*.dll" "$(SolutionDir)..\Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
     </PostBuildEvent>
     <BuildLog>
       <Path>$(SolutionDir)BuildTemp\$(MSBuildProjectName).log</Path>
@@ -181,13 +181,13 @@ xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>RD /S /Q "$(SolutionDir)Build\include"
-RD /S /Q "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)"
-RD /S /Q "$(SolutionDir)Build\$(Platform)\$(Configuration)"
+      <Command>RD /S /Q "$(SolutionDir)..\Build\include"
+RD /S /Q "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)"
+RD /S /Q "$(SolutionDir)..\Build\$(Platform)\$(Configuration)"
 
-xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)Build\include\$(ProjectName)" /e /y /i /r
-xcopy "$(OutDir)*.lib" "$(SolutionDir)Build\lib\$(Platform)\$(Configuration)" /y /i
-xcopy "$(OutDir)*.dll" "$(SolutionDir)Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
+xcopy "$(ProjectDir)include\$(ProjectName)" "$(SolutionDir)..\Build\include\$(ProjectName)" /e /y /i /r
+xcopy "$(OutDir)*.lib" "$(SolutionDir)..\Build\lib\$(Platform)\$(Configuration)" /y /i
+xcopy "$(OutDir)*.dll" "$(SolutionDir)..\Build\bin\$(Platform)\$(Configuration)" /y /i</Command>
     </PostBuildEvent>
     <BuildLog>
       <Path>$(SolutionDir)BuildTemp\$(MSBuildProjectName).log</Path>
