@@ -1,4 +1,4 @@
-# GyvrTools project
+# GyvrTools
 
 ## What is this project about ?
 GyvrTools is a tool library. My goals for this project are:
@@ -25,5 +25,5 @@ you want. A "Build" folder will be generated at the root of the repository, read
 
 ## Current architecture 
 
-### GyvrEngine - Package Diagram
+### GyvrTools - Package Diagram
 ![GyvrTools Package Diagram](Documentation/Package%20Diagram.svg)
